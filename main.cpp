@@ -7,6 +7,7 @@
 #include "BinaryReader.h"// How to include the header file. 
 // never include any .cpp file
 #include "Analyzer.h"
+#include "DuplicatesAnalyzer.h"
 
 
 
@@ -26,9 +27,13 @@ int main()
 		cout << vals[i] << endl;
 	}
 
-	Analyzer an(br.getValues(), br.getSize());
+	DuplicatesAnalyzer da(br.getValues(), br.getSize());
+	string res = da.analyze();
+	cout << res << endl;
+
+	/*Analyzer an(br.getValues(), br.getSize());
 	string result = an.analyze();
-	cout << result << endl;
+	cout << result << endl;*/
 
 	
 	/*int* rand_nums = createArray(SIZE);

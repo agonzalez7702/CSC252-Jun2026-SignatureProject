@@ -4,9 +4,11 @@
 
 class Analyzer
 {
-private:
+protected:
 	int* values;
 	int size;
+private:
+	
 	// Utility or Helper Method
 	int* cloneValues(int* values, int size);
 public:
@@ -14,6 +16,7 @@ public:
 
 	~Analyzer(); // Destructor = Class name; it never has parameters
 
-	std::string analyze();
+	virtual std::string analyze() =0;
+
 };
 

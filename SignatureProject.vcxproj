@@ -141,12 +141,14 @@
   <ItemGroup>
     <ClCompile Include="Analyzer.cpp" />
     <ClCompile Include="BinaryReader.cpp" />
+    <ClCompile Include="DuplicatesAnalyzer.cpp" />
     <ClCompile Include="functions.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Analyzer.h" />
     <ClInclude Include="BinaryReader.h" />
+    <ClInclude Include="DuplicatesAnalyzer.h" />
     <ClInclude Include="functions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
