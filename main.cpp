@@ -27,7 +27,7 @@ int main()
 		cout << vals[i] << endl;
 	}
 
-	DuplicatesAnalyzer da(br.getValues(), br.getSize());
+	DuplicatesAnalyzer da(vals, br.getSize());
 	string res = da.analyze();
 	cout << res << endl;
 
