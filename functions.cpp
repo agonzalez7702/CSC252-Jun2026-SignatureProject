@@ -42,4 +42,6 @@ void createBinaryFile(std::string filename)
     int size = SIZE;
     int* nums = createArray(size);
     writeBinary(filename, nums, size); // To generate the external file
+
+    delete[] nums;
 }

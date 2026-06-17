@@ -6,7 +6,7 @@ std::string DuplicatesAnalyzer::analyze()
     int* numbers = new int[size];
     for (int i = 0; i < size; i++)
     {
-        numbers[0] = 0;
+        numbers[i] = 0;
     }
     for (int i = 0; i < size; i++)
     {
@@ -22,6 +22,8 @@ std::string DuplicatesAnalyzer::analyze()
             dups++;
         }
     }
+
+    delete[] numbers;
 
     return "There are " + std::to_string(dups) + " duplicate values.";
 }
