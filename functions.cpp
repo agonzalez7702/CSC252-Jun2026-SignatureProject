@@ -18,7 +18,7 @@ int* createArray(int length)
     srand(unsigned(time(NULL)));
     for (int i = 0; i < length; i++)
     {
-        rand_num = rand() % 1000;
+        rand_num = rand() % SIZE;
         results[i] = rand_num;
     }
     //step3 return the result
