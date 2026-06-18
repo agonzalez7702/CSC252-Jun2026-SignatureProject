@@ -8,6 +8,8 @@
 // never include any .cpp file
 #include "Analyzer.h"
 #include "DuplicatesAnalyzer.h"
+#include "MissingAnalyzer.h"
+
 
 
 
@@ -31,9 +33,13 @@ int main()
 	string res = da.analyze();
 	cout << res << endl;
 
+	MissingAnalyzer ma(vals, br.getSize());
+	string result = ma.analyze();
+	cout << result << endl;
+
 	/*Analyzer an(br.getValues(), br.getSize());
 	string result = an.analyze();
-	cout << result << endl;*/
+	cout << result << endl;
 
 	
 	/*int* rand_nums = createArray(SIZE);
