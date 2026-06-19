@@ -1,4 +1,5 @@
 #include "Analyzer.h"
+#include <sting> //greg added to include srting
 
 using namespace std;
 
@@ -42,7 +43,7 @@ std::string Analyzer::analyze()
 		}
 	}
 
-	double average = sum / size;
+	double average = (double)sum / size; //Greg added (double) to prevent weird decimal errors
 	string res = "The average: " 
 		+ to_string(average) + ". \n";
 
