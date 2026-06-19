@@ -2,36 +2,26 @@
 #include "Functions.h"
 #include <string>
 
-std::string SearchAnalyzer::analyze()
+using namespace std;
+
+SearchAnalyzer::SearchAnalyzer(int* values, int size) : Analyzer(values, size)
 {
-	int* numbers = new int[SIZE];
+	selection_sort(this->values, this->size);
+}
+
+string SearchAnalyzer
+{
+	int foundCount = 0;
 
 	for (int i = 0; i < SIZE; i++)
 	{
-		numbers[i] = 0;
-	}
+		int key = rand() % 1000;
 
-	for (int i = 0; i < SIZE; i++)
-	{
-		int idx = values[i];
-		numbers[idx]++;
-	}
-
-	int search = 0;
-
-	for (int i = 0; i < SIZE; i++)
-	{
-		if (numbers[i] == 0)
+		if (binary_search(values, key, size))
 		{
-			search++;
+			foundCount++;
 		}
 	}
 
-	delete[] numbers;
-
-	return "There were " + std::to_string(search) + " search values.";
+return "Search analysis: Found " + to_string(foundCount) + " out of 100 random values.";
 }
-
-// class SearchAnalyzer : public Analyzer
-//	SearchAnalyzer(int* values, int size)
-//	std::string analyze() override
