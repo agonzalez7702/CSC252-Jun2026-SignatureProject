@@ -4,9 +4,17 @@
 
 std::string MissingAnalyzer::analyze()
 {
-    int* numbers = new int[SIZE];
+    int min_val = values[0]; //Greg added min and max to determine range
+    int max_val = values[0];
+    for (int i = 1; i < size; i++)
+    {
+        if (values[i] < min_val) min_val = values[i];
+        if (values[i] > max_val) max_val = values[i];
+    }
+    
+    int* numbers = new int[max_val + 1]; //Greg updated for max
 
-    for (int i = 0; i < SIZE; i++)
+    for (int i = 0; i < max_val; i++) //Greg updated for max
     {
         numbers[i] = 0;
     }
@@ -19,7 +27,7 @@ std::string MissingAnalyzer::analyze()
 
     int missing = 0;
 
-    for (int i = 0; i < SIZE; i++)
+    for (int i = min_val; i <= max_val; i++) //Greg updated for min max
     {
         if (numbers[i] == 0)
         {
