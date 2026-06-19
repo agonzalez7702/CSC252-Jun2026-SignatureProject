@@ -9,6 +9,8 @@
 #include "Analyzer.h"
 #include "DuplicatesAnalyzer.h"
 #include "MissingAnalyzer.h"
+#include "SearchAnalyzer.h" //Greg added SearchAnalyzer.h and StatisticsAnalyzer.h
+#include "StatisticsAnalyzer.h"
 
 
 
@@ -37,17 +39,27 @@ int main()
 	string result = ma.analyze();
 	cout << result << endl;
 
-	/*Analyzer an(br.getValues(), br.getSize());
+	/*      //Greg thinks this can all be deleted but doesn't want to delete it until we know everything compiles correctly
+	Analyzer an(br.getValues(), br.getSize()); 
 	string result = an.analyze();
 	cout << result << endl;
 
 	
-	/*int* rand_nums = createArray(SIZE);
+	int* rand_nums = createArray(SIZE);
 	writeBinary("test.dat", rand_nums, SIZE);
 	
 	cout << "Hello World\n";
-	cout << SIZE << endl;*/
+	cout << SIZE << endl;
+	*/
 
+	SearchAnalyzer sa(vals, br.getSize()); //Greg added SearchAnalyzer and StatisticsAnalyzer
+    string sa_result = sa.analyze();
+    cout << sa_result << endl;
 
+    StatisticsAnalyzer stat(vals, br.getSize());
+    string stat_result = stat.analyze();
+    cout << stat_result << endl;
+
+	return 0;
 
 }
