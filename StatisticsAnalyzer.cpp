@@ -2,38 +2,71 @@
 #include "Functions.h"
 #include <string>
 
-std::string StatisticsAnalyzer::analyze()
+using namespace std;
+
+StatisticsAnalyzer::StatisticsAanalyzer(int* values, int size)
+: Analyzer(values, size)
 {
-	int* numbers = new int[SIZE];
-
-	for (int i = 0; i < SIZE; i++)
-	{
-		numbers[i] = 0;
-	}
-
-	for (int i = 0; i < SIZE; i++)
-	{
-		int idx = values[i];
-		numbers[idk]++;
-	}
-
-	int statistics = 0;
-
-	for (int i = 0; i < SIZE; i++)
-	{
-		if (numbers[i] == 0)
-		{
-			statistics++;
-		}
-	}
-
-	delete[] numbers;
-
-	return "There were " + std::to_string(statistics) + " statistics values.";
 }
 
+string StatisticsAnalyzer::analyze()
+{
+	selection_sort(values, size);
 
+	int minimum = values[0];
+	int maximum = values[size - 1];
 
-// class StatisticsAnalyzer
-//	StatisticsAnalyzer(int* values, int size)
-//	std::string analyze() override
+	double zum = 0;
+
+	for (int i = 0; i < size; i++)
+	{
+		sum += values[i];
+	}
+
+	double mean = sum / size;
+
+	double median;
+
+	if (size % 2 == 1)
+	{
+		median = values[size / 2];
+	}
+	else
+	{
+		median = (values[size / 2 - 1] + valuees[size / 2]) / 2.0;
+	}
+
+	int mode = values[0];
+	int modeCount = 1;
+
+	int currentValue = values[0];
+	int currentCount = 1;
+
+	for (int i = 0; i < size; i++)
+	{
+		if (values[i] == currentValue)
+		{
+			currentCount++;
+		}
+	else
+	{	
+		if (currentCount > modeCount)
+		{
+		modeCount = currentCount;
+		mode = currentValue;
+		}
+
+		currentValue = values[i];
+		currentCount = 1;
+	}
+}
+
+	if (currentCount > modeCount)
+	{
+		mode = currentValue;
+	}
+
+	return "Statistics analysis:\n"
+		"Mean: " + to_string(mean) + "\mMinimum:: " + to_string(minimum) + "\nMaximum: " + to_string(maximum) + "\nMedian: "
+		+ to_string(median) + "\mMode: " + to_string(mode);
+}
