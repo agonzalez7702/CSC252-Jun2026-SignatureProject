@@ -1,5 +1,5 @@
 #include "Analyzer.h"
-#include <sting> //greg added to include srting
+#include <string> //greg added to include srting
 
 using namespace std;
 
