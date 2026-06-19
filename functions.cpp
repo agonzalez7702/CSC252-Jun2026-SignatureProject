@@ -45,3 +45,47 @@ void createBinaryFile(std::string filename)
 
     delete[] nums;
 }
+
+void selection_sort(int* values, int size) //Greg added selection_sort, binary_search_recursive, and binary_search
+{
+    for (int i = 0; i < size - 1; i++) {
+        int min_idx = i;
+        for (int j = i + 1; j < size; j++) {
+            if (values[j] < values[min_idx]) {
+                min_idx = j;
+            }
+        }
+        if (min_idx != i) {
+            int temp = values[i];
+            values[i] = values[min_idx];
+            values[min_idx] = temp;
+        }
+    }
+}
+
+bool binary_search_recursive(int* values, int key, int start, int end) 
+{
+    if (start > end) 
+    {
+        return false;
+    }
+    
+    int mid = start + (end - start) / 2;
+    
+    if (values[mid] == key) 
+    {
+        return true;
+    }
+    
+    if (values[mid] > key) 
+    {
+        return binary_search_recursive(values, key, start, mid - 1);
+    }
+    
+    return binary_search_recursive(values, key, mid + 1, end);
+}
+
+bool binary_search(int* values, int key, int size) 
+{
+    return binary_search_recursive(values, key, 0, size - 1);
+}
