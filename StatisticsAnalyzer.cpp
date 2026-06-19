@@ -1,10 +1,10 @@
 #include "StatisticsAnalyser.h"
-#include "Functions.h"
+#include "functions.h" //Greg updated lowercase f
 #include <string>
 
 using namespace std;
 
-StatisticsAnalyzer::StatisticsAanalyzer(int* values, int size)
+StatisticsAnalyzer::StatisticsAnalyzer(int* values, int size) 
 : Analyzer(values, size)
 {
 }
@@ -16,7 +16,7 @@ string StatisticsAnalyzer::analyze()
 	int minimum = values[0];
 	int maximum = values[size - 1];
 
-	double zum = 0;
+	double sum = 0;
 
 	for (int i = 0; i < size; i++)
 	{
@@ -33,7 +33,7 @@ string StatisticsAnalyzer::analyze()
 	}
 	else
 	{
-		median = (values[size / 2 - 1] + valuees[size / 2]) / 2.0;
+		median = (values[size / 2 - 1] + values[size / 2]) / 2.0;
 	}
 
 	int mode = values[0];
@@ -42,7 +42,7 @@ string StatisticsAnalyzer::analyze()
 	int currentValue = values[0];
 	int currentCount = 1;
 
-	for (int i = 0; i < size; i++)
+	for (int i = 1; i < size; i++) //Greg changed to start from 1 so index isn't counted twice
 	{
 		if (values[i] == currentValue)
 		{
@@ -67,6 +67,6 @@ string StatisticsAnalyzer::analyze()
 	}
 
 	return "Statistics analysis:\n"
-		"Mean: " + to_string(mean) + "\mMinimum:: " + to_string(minimum) + "\nMaximum: " + to_string(maximum) + "\nMedian: "
-		+ to_string(median) + "\mMode: " + to_string(mode);
+		"Mean: " + to_string(mean) + "\nMinimum:: " + to_string(minimum) + "\nMaximum: " + to_string(maximum) + "\nMedian: "
+		+ to_string(median) + "\nMode: " + to_string(mode);
 }
