@@ -3,10 +3,10 @@
 
 std::string DuplicatesAnalyzer::analyze()
 {
-    int max_val = values[0]  //Greg added a max value finder to prevent memory issues if number larger than dataset 
+    int max_val = values[0];  //Greg added a max value finder to prevent memory issues if number larger than dataset 
     for (int i = 1; i < size; i++)
     {
-        if (values[i] > nax_val)
+        if (values[i] > max_val)
         {
             max_val = values[i];
         }
