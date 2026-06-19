@@ -5,7 +5,7 @@
 class SearchAnalyzer : public Analyzer
 {
 public:
-	SearchAnalyzer(int* values, int size)
+	SearchAnalyzer(int* values, int size); //Greg added ;
 
 	std::string analyze() override;
 };
