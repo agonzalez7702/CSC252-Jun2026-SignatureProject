@@ -1,4 +1,4 @@
-#include "StatisticsAnalyser.h"
+#include "StatisticsAnalyzer.h"
 #include "functions.h" //Greg updated lowercase f
 #include <string>
 
