@@ -6,7 +6,7 @@
 // NEVER use "using namespace std;" in header files
 
 // Declaring constants
-// const int SIZE = 15; //Greg doesn't think this is needed but doesn't want to delete it yet in case something breaks
+const int SIZE = 15;
 
 // Declaring functions
 
