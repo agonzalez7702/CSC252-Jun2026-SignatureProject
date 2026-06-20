@@ -6,7 +6,7 @@
 // NEVER use "using namespace std;" in header files
 
 // Declaring constants
-const int SIZE = 15;
+const int SIZE = 100; // Alex changed to general array of 100 numbers
 
 // Declaring functions
 

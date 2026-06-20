@@ -37,5 +37,5 @@ std::string MissingAnalyzer::analyze()
 
     delete[] numbers;
 
-    return "There were " + std::to_string(missing) + " missing values.";
+    return "\nMissing Analyzer:\n" "There were " + std::to_string(missing) + " missing values.";
 }

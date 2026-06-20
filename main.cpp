@@ -31,6 +31,10 @@ int main()
 		cout << vals[i] << endl;
 	}
 
+	StatisticsAnalyzer stat(vals, br.getSize());
+	string stat_result = stat.analyze();
+	cout << stat_result << endl;
+
 	DuplicatesAnalyzer da(vals, br.getSize());
 	string res = da.analyze();
 	cout << res << endl;
@@ -39,26 +43,11 @@ int main()
 	string result = ma.analyze();
 	cout << result << endl;
 
-	/*      //Greg thinks this can all be deleted but doesn't want to delete it until we know everything compiles correctly
-	Analyzer an(br.getValues(), br.getSize()); 
-	string result = an.analyze();
-	cout << result << endl;
-
-	
-	int* rand_nums = createArray(SIZE);
-	writeBinary("test.dat", rand_nums, SIZE);
-	
-	cout << "Hello World\n";
-	cout << SIZE << endl;
-	*/
-
 	SearchAnalyzer sa(vals, br.getSize()); //Greg added SearchAnalyzer and StatisticsAnalyzer
     string sa_result = sa.analyze();
     cout << sa_result << endl;
 
-    StatisticsAnalyzer stat(vals, br.getSize());
-    string stat_result = stat.analyze();
-    cout << stat_result << endl;
+    
 
 	return 0;
 

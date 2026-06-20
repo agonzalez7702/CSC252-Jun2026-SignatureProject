@@ -23,5 +23,6 @@ string SearchAnalyzer::analyze() //Greg addded method
 		}
 	}
 
-return "Search analysis: Found " + to_string(foundCount) + " out of 100 random values.";
+return "\nSearch analysis:\n"
+"There were " + to_string(foundCount) + " out of 100 random values.";
 }

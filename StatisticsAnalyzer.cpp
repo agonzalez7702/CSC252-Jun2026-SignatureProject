@@ -66,7 +66,10 @@ string StatisticsAnalyzer::analyze()
 		mode = currentValue;
 	}
 
-	return "Statistics analysis:\n"
-		"Mean: " + to_string(mean) + "\nMinimum:: " + to_string(minimum) + "\nMaximum: " + to_string(maximum) + "\nMedian: "
-		+ to_string(median) + "\nMode: " + to_string(mode);
+	return "\nStatistics analysis:\n" 
+		"The Minimum value is: " + to_string(minimum) + 
+		"\nThe Maximum value is: " + to_string(maximum) + 
+		"\nThe Mean value is: " + to_string(mean) +
+		"\nThe Median value is: " + to_string(median) + 
+		"\nThe Mode value is: " + to_string(mode);
 }

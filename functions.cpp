@@ -18,7 +18,7 @@ int* createArray(int length)
     srand(unsigned(time(NULL)));
     for (int i = 0; i < length; i++)
     {
-        rand_num = rand() % SIZE;
+        rand_num = rand() %1000; // Alex changed so the numbers generated are from 0-999
         results[i] = rand_num;
     }
     //step3 return the result

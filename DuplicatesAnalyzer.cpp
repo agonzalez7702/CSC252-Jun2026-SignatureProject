@@ -34,5 +34,5 @@ std::string DuplicatesAnalyzer::analyze()
 
     delete[] numbers;
 
-    return "There are " + std::to_string(dups) + " duplicate values.";
+    return "\nDuplicates Analyzer:\n" "There were " + std::to_string(dups) + " duplicate values.";
 }

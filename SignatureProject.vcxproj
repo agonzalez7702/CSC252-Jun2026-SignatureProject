@@ -145,6 +145,8 @@
     <ClCompile Include="functions.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MissingAnalyzer.cpp" />
+    <ClCompile Include="SearchAnalyzer.cpp" />
+    <ClCompile Include="StatisticsAnalyzer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Analyzer.h" />
@@ -152,6 +154,8 @@
     <ClInclude Include="DuplicatesAnalyzer.h" />
     <ClInclude Include="functions.h" />
     <ClInclude Include="MissingAnalyzer.h" />
+    <ClInclude Include="SearchAnalyzer.h" />
+    <ClInclude Include="StatisticsAnalyzer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
